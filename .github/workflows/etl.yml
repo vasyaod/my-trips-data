@@ -1,0 +1,88 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone viewer code
+      uses: actions/checkout@v2
+      with:
+        repository: vasyaod/my-trips-viewer
+        path: my-trips-code
+
+    - name: Clone repo of pages
+      uses: actions/checkout@v2
+      with:
+        repository: vasyaod/my-trips
+        path: my-trips
+
+    - name: Clone data
+      uses: actions/checkout@v2
+      with:
+        path: my-trips-data
+
+    - name: Compile site code
+      run: |
+        cd my-trips-code/viewer
+        npm install
+        npm run build
+        cd ../..
+        cp -u my-trips-code/viewer/bundle.js my-trips
+        cp -u my-trips-code/viewer/index.html my-trips
+
+    - name: Data processing
+      env: 
+        INPUT_DATA_PATH: ../../my-trips-data
+        OUTPUT_DATA_PATH: ../../my-trips
+      run: |
+        cd my-trips-code/etl
+        curl -L https://yt-dl.org/downloads/latest/youtube-dl -o youtube-dl
+        chmod +x youtube-dl
+        npm install
+        npm run lets-do-this
+
+    - name: Run site in dev mode
+      run: |
+        cp -R my-trips/data my-trips-code/viewer
+        cp -R my-trips/images my-trips-code/viewer
+        cd my-trips-code/viewer
+        npm install
+        npm run dev &
+        cd ../..
+
+    - name: Make preview for every trip
+      env: 
+        INPUT_DATA_PATH: ../../my-trips-data
+        OUTPUT_DATA_PATH: ../../my-trips
+      run: |
+        cd my-trips-code/previewer
+        npm install
+        npm run lets-do-this
+        cd ../..
+
+    - name: Commit my-trips page
+      run: |
+        cd my-trips
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Add changes" -a
+
+
+    - name: Push changes to master
+      uses: ad-m/github-push-action@master
+      with:
+        directory: my-trips
+        repository: vasyaod/my-trips
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./my-trips
