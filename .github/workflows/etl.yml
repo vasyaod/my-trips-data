@@ -78,7 +78,7 @@ jobs:
       with:
         directory: my-trips
         repository: vasyaod/my-trips
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
