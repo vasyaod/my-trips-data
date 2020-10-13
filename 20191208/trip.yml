@@ -1,4 +1,5 @@
 title: Recumbent Bike Climbing
 description: First serious uphill (700m) with the recumbent bike
-gpx: ["track.gpx"]
+gpx: 
+  - "track.gpx"
 date: 2019-12-08

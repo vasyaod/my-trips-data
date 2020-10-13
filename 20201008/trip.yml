@@ -1,4 +1,5 @@
 title: San Francisco to Los Angeles, Day 6 of 6
 description: Unfortunately afternoon my wife caught me in Oxnard a little before Los Angeles but I swear that I would get Malibu before sunset if would have more time
-gpx: ["track.gpx"]
+gpx: 
+  - "track.gpx"
 date: 2020-10-08

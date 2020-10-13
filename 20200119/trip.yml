@@ -1,4 +1,5 @@
 title: Around the Bay
 description: In fact, it was 225 km for 16 hours approximately. The next increasing daily distance is possible only for increasing average speed and reducing navigation time
-gpx: ["track.gpx"]
+gpx: 
+    - "track.gpx"
 date: 2020-01-19

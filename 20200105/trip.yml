@@ -1,4 +1,5 @@
 title: Family Triple Tandem Ride To Stanford
 description:
-gpx: ["track.gpx"]
+gpx: 
+    - "track.gpx"
 date: 2020-01-05

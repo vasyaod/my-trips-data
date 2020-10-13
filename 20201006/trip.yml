@@ -1,4 +1,5 @@
 title: San Francisco to Los Angeles, Day 4 of 6
 description: In this day I spent $70 for a motel room and shower, I think it is the most expensive day during of the trip
-gpx: ["track.gpx"]
+gpx: 
+  - "track.gpx"
 date: 2020-10-06
