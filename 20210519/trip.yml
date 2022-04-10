@@ -1,0 +1,7 @@
+title: To Seattle
+description: Day 5. Uphill til 1800m, my personal record of altitude on a bike.
+gpx:
+  - "track.gpx"
+date: 2021-05-19
+hash:
+  - 7889839d740560ffe06732acb70a19fc0a2d0a1cdeb94abacbc79b385e81e3d5      # Add a hash of track.gpx for to be sure that track.gpx is not changed
