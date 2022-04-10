@@ -3,5 +3,3 @@ description: Day 1. The first day wasn't lucky I spent 4 patches for flatten tir
 gpx:
   - "track.gpx"
 date: 2021-05-15
-hash:
-  - 57d34cdd4e2bc753bb8d8b7e02a21fa61c03d4f012407559ab2c52fba786d358      # Add a hash of track.gpx for to be sure that track.gpx is not changed

@@ -3,5 +3,3 @@ description: Day 4. Tire corruption on a gravel road, uphill to 1km
 gpx:
   - "track.gpx"
 date: 2021-05-18
-hash:
-  - 71c10a3cf84cd7ea127b2125eb2ca227da10c108702fbda4ffd2170000266088      # Add a hash of track.gpx for to be sure that track.gpx is not changed

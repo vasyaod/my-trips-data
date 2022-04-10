@@ -2,5 +2,3 @@ title: To Seattle
 gpx:
   - "track.gpx"
 date: 2021-05-29
-hash:
-  - 9193ba627115fb301eb1dcb0f5e2e3b001b684204bda37bb2a68fb96faafa64a      # Add a hash of track.gpx for to be sure that track.gpx is not changed

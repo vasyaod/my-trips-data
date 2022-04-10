@@ -3,5 +3,3 @@ description: Day 14. The bike was sent back to the home by Fedex for 450$ (incre
 gpx:
   - "track.gpx"
 date: 2021-05-28
-hash:
-  - 2cb16d50c22c0e116e8befb74359a8503539a4ab5d61e2cea850c6e33df20600      # Add a hash of track.gpx for to be sure that track.gpx is not changed

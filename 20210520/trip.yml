@@ -3,5 +3,3 @@ description: Day 6. Rain, snow, and temperature is around 0 degree of celsius. 1
 gpx:
   - "track.gpx"
 date: 2021-05-20
-hash:
-  - 6ab007c4bb0821042b6be4850b52da467b50d031c137cf76026cc8af8a294dd1      # Add a hash of track.gpx for to be sure that track.gpx is not changed

@@ -3,5 +3,3 @@ description: Day 3
 gpx:
   - "track.gpx"
 date: 2021-05-17
-hash:
-  - db5049e5ce115516612f85002a248db315d6734232476416fb48b09500e6ee7a      # Add a hash of track.gpx for to be sure that track.gpx is not changed
