@@ -10,3 +10,9 @@ siteTitle: "Favorite Bike Tracks"
 # Header of the site
 siteDescription: "Collection of my favorite bike and walking tracks."
 
+# Distance threshold (meters) for filtering
+distanceThreshold: 20
+
+# Time threshold (seconds) for splitting of tracks
+timeThreshold: 600
+
